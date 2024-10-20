@@ -13,6 +13,6 @@ public record Activity(
         String action,
         Actor actor,
         Target target,  // 다양한 Target 타입을 처리
-        String timestamp
+        long timestamp
 ) {}
 

@@ -33,7 +33,7 @@ public class ActivityDeserializer extends JsonDeserializer<Activity> {
         String action = rootNode.get("action").asText();
         JsonNode actorNode = rootNode.get("actor");
         JsonNode targetNode = rootNode.get("target");
-        String timestamp = rootNode.get("timestamp").asText();
+        long timestamp = rootNode.get("timestamp").asLong();
 
         Actor actor = objectMapper.readValue(actorNode.toString(), Actor.class);
 

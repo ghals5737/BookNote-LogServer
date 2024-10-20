@@ -3,11 +3,11 @@ server:
 spring:
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: activity  # ??? ??? ?????? ??
+      host: ${MONGODB_URL}
+      port: ${MONGODB_PORT}
+      database: activity
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${KAFKA_HOST}
     consumer:
       group-id: activiey-log-server-group
       auto-offset-reset: earliest

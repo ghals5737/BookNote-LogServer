@@ -21,7 +21,17 @@ public class ActivityEntity {
     private String action;
     private Actor actor;
     private Target target;
-    private String timestamp;
+    private long timestamp;
+
+    public Activity toModel() {
+        return new Activity(
+                this.id,
+                this.action,
+                this.actor,
+                this.target,
+                this.timestamp
+        );
+    }
 
     public static ActivityEntity from(Activity activity){
         ActivityEntity activityEntity=new ActivityEntity();
