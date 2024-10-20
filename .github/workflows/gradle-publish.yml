@@ -20,8 +20,7 @@ jobs:
       run: echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login https://registry.booknote.site -u "${{ secrets.REGISTRY_USERNAME }}" --password-stdin
 
     - name: Build Docker image
-      run: |
-        cd booknote
+      run: |        
         docker build . \
           --build-arg MONGODB_URL=${{ secrets.MONGODB_URL }} \
           --build-arg MONGODB_PORT=${{ secrets.MONGODB_PORT }} \
