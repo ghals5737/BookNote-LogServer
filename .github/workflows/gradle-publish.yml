@@ -24,7 +24,7 @@ jobs:
         docker build . \
           --build-arg MONGODB_URL=${{ secrets.MONGODB_URL }} \
           --build-arg MONGODB_PORT=${{ secrets.MONGODB_PORT }} \
-          --build-arg KAFKA_HOST=${{ secrets.KAFKA_HOST }} \         
+          --build-arg KAFKA_HOST=${{ secrets.KAFKA_HOST }} \
           -t registry.booknote.site/booknote-activity-log:latest
 
     - name: Push Docker image
