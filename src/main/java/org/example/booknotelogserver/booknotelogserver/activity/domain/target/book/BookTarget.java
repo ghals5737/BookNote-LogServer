@@ -11,6 +11,8 @@ public record BookTarget(
         String title,
         UserTarget user,
         boolean isPinned,
+        String image,
+        int order,
         String createAt,
         String updateAt
 ) implements Target {}
